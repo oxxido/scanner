@@ -1,0 +1,16 @@
+{
+  "name": "@scanner/scanner-core",
+  "version": "0.1.0",
+  "private": true,
+  "main": "src/index.ts",
+  "types": "src/index.ts",
+  "peerDependencies": {
+    "@dariyd/react-native-document-scanner": ">=2.1.0",
+    "@shopify/react-native-skia": ">=2.0.0",
+    "expo-crypto": "*",
+    "expo-file-system": "*",
+    "expo-image-manipulator": "*",
+    "expo-image-picker": "*",
+    "react-native": "*"
+  }
+}

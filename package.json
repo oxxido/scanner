@@ -1,0 +1,15 @@
+{
+  "name": "scanner-monorepo",
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "typecheck": "tsc -p packages/document-model && tsc -p packages/scanner-core && tsc -p apps/scanner",
+    "test": "node --experimental-strip-types --no-warnings --test packages/*/test/*.test.ts apps/scanner/test/*.test.ts"
+  },
+  "allowScripts": {
+    "@shopify/react-native-skia@2.6.2": true
+  }
+}
