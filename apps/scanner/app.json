@@ -1,0 +1,54 @@
+{
+  "expo": {
+    "name": "ScannerTest",
+    "slug": "scannertest",
+    "scheme": "scannertest",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "light",
+    "ios": {
+      "bundleIdentifier": "com.scannertest.app",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSCameraUsageDescription": "La cámara se usa solo para escanear documentos. Nada sale de tu dispositivo.",
+        "ITSAppUsesNonExemptEncryption": false
+      }
+    },
+    "android": {
+      "package": "com.scannertest.app",
+      "blockedPermissions": [
+        "android.permission.CAMERA",
+        "android.permission.RECORD_AUDIO",
+        "android.permission.ACCESS_FINE_LOCATION",
+        "android.permission.ACCESS_COARSE_LOCATION"
+      ],
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "plugins": [
+      "expo-router",
+      "expo-sqlite",
+      "expo-font",
+      [
+        "expo-image-picker",
+        {
+          "photosPermission": "Se usa para convertir fotos de tu galería en páginas de un documento.",
+          "cameraPermission": "La cámara se usa solo para escanear documentos. Nada sale de tu dispositivo.",
+          "microphonePermission": false
+        }
+      ],
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#FFFFFF"
+        }
+      ]
+    ],
+    "icon": "./assets/icon.png"
+  }
+}
